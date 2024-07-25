@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+</head>
+<style>
+body{
+    background-color: #FFF5E1;
+}
+h1{
+    color:blueviolet;
+     font-size:80px;
+     font-weight: bold;
+
+
+}
+p{
+    color:#FF6969;
+    padding-bottom:20px;
+    font-size:30px ;
+    font-style: italic;
+}
+button{
+    background-color:#C80036;
+    color:white;
+    padding-left: 10px;
+    margin-left:10px;
+    border-radius: 10%;
+    margin-bottom: 20px;
+
+
+
+}ul{
+    text-decoration: none;
+    display: inline;
+    padding-bottom: 20px;
+}
+    
+
+
+
+
+
+</style>
+<body>
+    <center>
+    <h1>TO-DO LIST</h1>
+    <p>"Setting goals is the first step in turning the invisible into visible!" </p>
+    <input id="input">
+    <button onclick="add()">ADD</button>
+   <ul id="list-container">
+<li></li>
+   </ul>
+   
+
+
+<script>
+    var ul=document.getElementById("list-container")
+    var input=document.getElementById("input")
+    function add()
+    {
+  var listitem=document.createElement("li")
+  listitem.innerHTML=input.value+"<button onclick='remove(event)'>DELETE</button>"
+  ul.append(listitem)
+    }
+    function remove(event)
+    {
+event.target.parentElement.remove()
+    }
+    
+</script>
+
+</center>
+
+    
+</body>
+</html>
